@@ -1,13 +1,13 @@
 {
-  "name": "yarl-reduce",
+  "name": "@yarljs/reduce",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "node test/index.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Clark Rinker",
+  "license": "MIT",
   "devDependencies": {
     "redux": "^3.7.2"
   }

@@ -5,7 +5,7 @@ function Reducable(reducer) {
   return (target) => {
     Actions[target.name] = target.bind({type: target.name});
     Reducers[target.name] = reducer;
-    return target;
+    return Actions[target.name];
   };
 }
 
