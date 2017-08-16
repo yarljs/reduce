@@ -3,7 +3,13 @@ let Actions = [];
 
 function Reducable(reducer) {
   return (target) => {
-    Actions[target.name] = target.bind({type: target.name});
+    let res = target.bind({type: target.name});
+    Object.defineProperty(res, 'slice', {
+      get : function () {
+          return target.name
+      }
+    })
+    Actions[target.name] = res;
     Reducers[target.name] = reducer;
     return Actions[target.name];
   };
